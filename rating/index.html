@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="star.ico" rel="icon" type="image/x-icon" />
+    <title>Rate Song</title>
+  </head>
+  <body>
+    <form name="rating" netlify>
+      <p>
+        <label class="song-name"
+          >Song Name:
+          <select name="song[]" multiple required>
+            <option value="two-of-us">Two Of Us</option>
+            <option value="dig-a-pony">Dig A Pony</option>
+            <option value="across-the-universe">Across The Universe</option>
+            <option value="i-me-mine">I Me Mine</option>
+            <option value="dig-it">Dig It</option>
+            <option value="let-it-be">Let It Be</option>
+            <option value="maggie-mae">Maggie Mae</option>
+            <option value="i-have-got-a-feeling">I've Got A Feeling</option>
+            <option value="one-after-909">One After 909</option>
+            <option value="the-long-and-winding-road">The Long And Winding Road</option>
+            <option value="for-you-blue">For You Blue</option>
+            <option value="get-back">Get Back</option>
+          </select></label
+        >
+      </p>
+      <p>
+        <label class="rating"
+          >Rating - Out of 10 <input type="number" name="number" min="0" max="10" required/></label
+        ></label>
+      </p>
+      <p>
+        <button class="btn" type="submit">Submit Rating</button>
+      </p>
+    </form>
+  </body>
+</html>
