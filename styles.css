@@ -87,17 +87,11 @@ body {
   font-family: "Redressed", cursive;
 }
 
-.lyrics-heading {
-  color: var(--font-color-heading);
-}
-
-.lud {
+.the-beatles {
   color: var(--font-color-heading2);
 }
 
-.lud2 {
-  color: var(--font-color-sub-heading);
-}
+
 
 /* Icon on top of the website */
 #spotify {
@@ -146,10 +140,6 @@ body {
 .rate-song {
   color: var(--rate-song-btn);
   text-decoration: none;
-}
-
-.lyrics-lud {
-  color: var(--font-color-blue);
 }
 
 a,
@@ -344,9 +334,6 @@ a:active {
   font-family: "Handlee", cursive;
 }
 
-.lyrics {
-  color: var(--lyrics-text-color);
-}
 
 #embed {
   display: none;
