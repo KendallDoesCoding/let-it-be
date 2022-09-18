@@ -1,4 +1,5 @@
 // Const Songs
+// Defines the start time and end time of the songs.
 const songs = {
   "Two Of Us": {
     start: "0",
@@ -53,11 +54,21 @@ const songs = {
     end: "2177",
   },
 };
+
+// Select class songs from index.html 
 const songsDOM = document.querySelector(".songs");
+
 const embed = document.getElementById("embed");
+
 const newTabGithub = document.querySelector(".social");
+
+// Select class round
 const toggle = document.querySelector(".round");
+
+// Select class slider from index.html
 const slider = document.querySelector(".slider");
+
+// execute modeswitch function on click.
 toggle.addEventListener("click", modeSwitch);
 
 // Darkmode/Lightmode + Making songs play when clicked
@@ -66,12 +77,16 @@ let isLight = true;
 
 const updateMode = () => {
   isLight
+  // Change the background image 1 if isight is true.
     ? (slider.style.backgroundImage = "url('./images/day.png')")
+
+    // else Change the background image 2.
     : (slider.style.backgroundImage = "url('./images/night.png')");
   const rootElement = document.body;
   rootElement.classList.toggle("darkMode");
 };
 
+// if mode is dark i.e not light (islight = false) it will execute function updateMode()
 function modeSwitch() {
   isLight = !isLight;
   updateMode();
@@ -79,13 +94,25 @@ function modeSwitch() {
 embed.style = "display:none";
 let userHasClickedASong = false;
 
+// This function access songs object and take each song by index 
+// to play the songs 
 Object.keys(songs).map((song_title) => {
   const startTime = songs[song_title].start;
   const endTime = songs[song_title].end;
+
+  // Created the Element p (paragraph) with javascript 
   const outerElem = document.createElement("p");
+
+  // created the link element with javascript
   const link = document.createElement("a");
+
+  // Shows the songs on the page.
   link.innerHTML = song_title;
+
+  // Appear curson as pointer.
   link.style = "cursor: pointer";
+
+  // when click on the links it will start song accoording to starttime and endtime mention in songs object.
   link.onclick = () => {
     embed.src = `https://www.youtube.com/embed/rrhXXFAKEYk?start=${startTime}&autoplay=1&end=${endTime}`;
     console.log(
@@ -95,7 +122,11 @@ Object.keys(songs).map((song_title) => {
       userHasClickedASong = true;
     }
   };
+
+  // Adding all the links in paragraph element 
   outerElem.appendChild(link);
+
+  // Adding all the pragraph and link to div with class songs.
   songsDOM.appendChild(outerElem);
 });
 
