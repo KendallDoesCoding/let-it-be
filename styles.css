@@ -27,7 +27,7 @@
   --bg-image: url("/images/light-bg.png");
 }
 
-/* when slider move to darkmode following customization applied*/
+/* when slider move to darkmode following customization get applied*/
 .darkMode {
   --bg-color: lightyellow;
   --font-color-red: red;
