@@ -27,6 +27,7 @@
   --bg-image: url("/images/light-bg.png");
 }
 
+/* when slider move to darkmode following customization get applied*/
 .darkMode {
   --bg-color: lightyellow;
   --font-color-red: red;
@@ -359,6 +360,7 @@ a:active {
   right: 0;
 }
 
+/* Customizing switch button by this */
 .switch {
   position: relative;
   display: inline-block;
